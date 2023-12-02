@@ -29,11 +29,6 @@ steps:
   inputs:
     command: 'install'
     workingDir: 'app'
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    workingDir: 'app'
-    customCommand: 'run build'
 
 - task: PublishBuildArtifacts@1
   inputs:
