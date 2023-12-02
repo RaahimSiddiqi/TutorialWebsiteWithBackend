@@ -14,31 +14,25 @@ steps:
   inputs:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      ls
+
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '/blog'
+    workingDir: 'blog'
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '/blog'
+    workingDir: 'blog'
     customCommand: 'run build'
 
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '/app'
+    workingDir: 'app'
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '/app'
+    workingDir: 'app'
     customCommand: 'run build'
 
 - task: PublishBuildArtifacts@1
