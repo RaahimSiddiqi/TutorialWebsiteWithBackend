@@ -18,21 +18,21 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '/client'
+    workingDir: '/blog'
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '/client'
+    workingDir: '/blog'
     customCommand: 'run build'
 
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '/server'
+    workingDir: '/app'
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '/server'
+    workingDir: '/app'
     customCommand: 'run build'
 
 - task: PublishBuildArtifacts@1
