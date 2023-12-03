@@ -33,8 +33,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: |
-      app
-      blog/dist
+      app/**
+      blog/dist/**
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
