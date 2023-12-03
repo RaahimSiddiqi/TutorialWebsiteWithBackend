@@ -47,7 +47,7 @@ const Login = () => {
 
     const handleLogin = async (username: string, password: string) => {
         try {
-          const response = await fetch('http://localhost:3001/login', {
+          const response = await fetch('https://tutorialwebsitewithbackend.azurewebsites.net/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
